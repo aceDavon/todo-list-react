@@ -1,7 +1,8 @@
 import * as React from 'react';
+import TodoContainer from './components/TodoContainer';
 
 function App() {
-  return <div className="text-4xl font-bold">Hello</div>;
+  return <div><TodoContainer /></div>;
 }
 
 export default App;

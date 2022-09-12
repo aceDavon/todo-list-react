@@ -31,3 +31,56 @@ export const Logo = () => (
     </g>
   </svg>
 );
+
+export const Delete = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    viewBox="0 0 24 24"
+    width="16px"
+    fill="red"
+    className="absolute right-4"
+  >
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M15 16h4v2h-4zm0-8h7v2h-7zm0 4h6v2h-6zM3 18c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V8H3v10zM14 5h-3l-1-1H6L5 5H2v2h12z" />
+  </svg>
+);
+
+export const Add = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    viewBox="0 0 24 24"
+    width="24px"
+    className="absolute top-4 right-2 cursor-pointer fill-blue-500 z-0"
+  >
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+  </svg>
+);
+
+export const Hamburger = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    viewBox="0 0 24 24"
+    width="24px"
+    className="fill-blue-500 cursor-pointer"
+  >
+    <path d="M0 0h24v24H0V0z" fill="none" />
+    <path d="M3 18h13v-2H3v2zm0-5h10v-2H3v2zm0-7v2h13V6H3zm18 9.59L17.42 12 21 8.41 19.59 7l-5 5 5 5L21 15.59z" />
+  </svg>
+);
+
+export const CloseBtn = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="34px"
+    viewBox="0 0 24 24"
+    width="34px"
+    fill="#000000"
+  >
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+  </svg>
+);

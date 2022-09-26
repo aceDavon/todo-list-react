@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import TodoContainer from './components/TodoContainer';
 import Landing from './Landing';
+import NotFound from './NotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
           <Route element={<Landing />} index />
           <Route element={<TodoContainer />} path="todos" />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

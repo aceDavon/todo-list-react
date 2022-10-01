@@ -1,5 +1,5 @@
 import React from 'react';
-import landing from './img/landing.jpeg';
+import landing from './img/bg.webp';
 
 const Landing = () => {
   const [todos, setTodos] = React.useState([]);
@@ -21,7 +21,7 @@ const Landing = () => {
       />
       <h1 className="text-4xl text-center mt-16">Hello there!</h1>
       <p className="text-center">See a list of your tasks below: </p>
-      <ul className="mt-8 mx-auto w-5/12">
+      <ul className="mt-8 mx-auto w-10/12 lg:w-5/12">
         { todos ? (
           todos.map((todo) => {
             const {
@@ -47,7 +47,7 @@ const Landing = () => {
                 <li
                   className={
                     deadline
-                      ? 'border rounded-xl text-sm opacity-100 my-1 bg-white w-1/3 text-center'
+                      ? 'rounded-xl text-sm opacity-100 my-1 w-1/3 text-center'
                       : 'px-2 py-1 w-1/3 text-center'
                   }
                 >

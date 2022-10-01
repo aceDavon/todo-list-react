@@ -29,8 +29,8 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 px-12 lg:px-24 py-4 flex justify-between items-center shadow bg-transparent z-50">
-      <div className="text-4xl font-bold text-blue-500">Logo</div>
+    <nav className="fixed top-0 left-0 right-0 px-4 lg:px-24 py-4 flex justify-between items-center shadow bg-transparent z-50">
+      <div className="text-4xl font-bold text-blue-500">To-Do</div>
       <button
         type="button"
         className="inline-block lg:hidden"

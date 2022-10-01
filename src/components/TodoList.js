@@ -30,7 +30,7 @@ const TodoList = (items) => {
   };
 
   return (
-    <ul className="flex flex-col gap-2 px-4 py-4 mx-auto my-8 w-7/12 shadow-lg shadow-gray-500 rounded-md bg-white opacity-90">
+    <ul className="flex flex-col gap-2 px-4 py-4 mx-auto my-8 w-10/12 lg:w-7/12 shadow-lg shadow-gray-500 rounded-md bg-white opacity-90">
       <div className="w-full relative z-0">
         <input
           ref={inputRef}

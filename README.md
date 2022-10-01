@@ -13,7 +13,7 @@
 
 ## Live Demo (if available)
 
-[Coming soon](https://livedemo.com)
+[Vercel](https://todo-list-react-w8sp-acedavon.vercel.app/)
 
 
 ## Getting Started

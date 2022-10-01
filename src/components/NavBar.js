@@ -9,7 +9,7 @@ const NavBar = () => {
     setOpen(!open);
   };
 
-  const styledActive = 'text-red-500 bg-white p-4 rounded-lg';
+  const styledActive = 'text-red-500 bg-white px-8 py-4 lg:p-4 rounded-lg';
   const NavItems = [
     {
       id: 1,
@@ -46,7 +46,7 @@ const NavBar = () => {
         }
       >
         { NavItems.map((link) => (
-          <li key={link.id} className="transition-all ease-in delay-75 hover:-translate-y-1">
+          <li key={link.id} className="transition-all my-4 lg:my-auto ease-in delay-75 hover:-translate-y-1">
             <NavLink
               to={link.path}
               className={({ isActive }) => (isActive

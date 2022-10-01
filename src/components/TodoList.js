@@ -5,7 +5,7 @@ import { Add, Delete } from '../Icons';
 const TodoList = (items) => {
   const { list } = items;
   const {
-    data, handleUpdate, setData,
+    data, handleUpdate, setData, handleDelete, handleDate,
   } = list;
   const inputRef = React.useRef();
   const id = data.length + 1;
@@ -15,6 +15,7 @@ const TodoList = (items) => {
       id,
       label: inputRef.current.value,
       completed: false,
+      deadline: null,
     };
     setData((prev) => [...prev, data]);
     inputRef.current.value = '';
@@ -47,9 +48,15 @@ const TodoList = (items) => {
             key={todo.id}
             className="flex gap-2 items-center relative transition-all delay-150 ease-in-out hover:scale-95"
           >
-            <input type="checkbox" checked={todo.completed} onChange={() => handleResolve(todo.id)} />
-            <Todo key={todo.id} list={{ todo, handleUpdate }} />
-            <Delete />
+            <input
+              type="checkbox"
+              checked={todo.completed}
+              onChange={() => handleResolve(todo.id)}
+            />
+            <Todo key={todo.id} list={{ todo, handleUpdate, handleDate }} />
+            <button type="button" onClick={() => handleDelete(todo.id)}>
+              <Delete />
+            </button>
           </div>
         ))
       ) : (

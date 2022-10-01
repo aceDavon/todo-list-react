@@ -11,7 +11,7 @@ const Todo = (items) => {
   return (
     <a
       href="#!"
-      className="text-base w-full font-medium transition-all ease-in delay-100 hover:text-sm"
+      className="text-base capitalize w-full font-medium"
       onDoubleClick={() => handleClick()}
     >
       {edit ? (
@@ -30,9 +30,9 @@ const Todo = (items) => {
               id="deadline"
               className="w-1/3 rounded-md my-2 px-2"
               onChange={(e) => handleDate(id, e)}
-              onKeyDown={(e) => e.key === 'Enter' && handleClick()}
             />
           </label>
+          <button type='button' className='p-2 bg-blue-600 text-white rounded-md border border-white mx-2 my-2' onClick={() => handleClick()}>Update</button>
         </>
       ) : (
         label

@@ -23,13 +23,43 @@ const Landing = () => {
       <p className="text-center">See a list of your tasks below: </p>
       <ul className="mt-8 mx-auto w-5/12">
         { todos ? (
-          todos.map((todo) => (
-            <div key={todo.id} className="flex gap-4 justify-between border-b-2 items-center">
-              <li key={todo.id} className="w-44">{todo.label}</li>
-              <li className="px-2 py-1 border rounded-xl text-sm opacity-100 my-1 bg-green-300">{todo.completed ? 'Completed' : 'Pending'}</li>
-            </div>
-          ))
-        ) : (<li className="text-center">No items added yet, Please add items to see them here</li>)}
+          todos.map((todo) => {
+            const {
+              id, label, completed, deadline,
+            } = todo;
+            return (
+              <div
+                key={id}
+                className="flex gap-4 justify-between border-b-2 items-center"
+              >
+                <li key={id} className="w-44">
+                  {label}
+                </li>
+                <li
+                  className={
+                    completed
+                      ? 'px-2 py-1 border border-white rounded-xl text-sm opacity-100 my-1 bg-green-300'
+                      : 'px-2 py-1 border border-white rounded-xl text-sm opacity-100 my-1 bg-red-300'
+                  }
+                >
+                  {completed ? 'Completed' : 'Pending'}
+                </li>
+                <li
+                  className={
+                    deadline
+                      ? 'border rounded-xl text-sm opacity-100 my-1 bg-white w-1/3 text-center'
+                      : 'px-2 py-1 w-1/3 text-center'
+                  }
+                >
+                  {deadline
+                    ? deadline.months > 0
+                      ? `${deadline.months} months, ${deadline.days} days left`
+                      : `${deadline.days} days left`
+                    : 'No date set'}
+                </li>
+              </div>
+            );
+          })) : (<li className="text-center">No items added yet, Please add items to see them here</li>)}
       </ul>
     </div>
   );

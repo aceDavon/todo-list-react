@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { intervalToDuration } from 'date-fns';
 import TodoList from './TodoList';
 import todoBg from '../img/todo.jpg';
 
@@ -22,6 +23,28 @@ const TodoContainer = () => {
     setDummy(!dummy);
   };
 
+  const handleDelete = (id) => {
+    const filteredList = data.filter((x) => x.id !== id);
+    localStorage.setItem('todos', JSON.stringify(filteredList));
+    setDummy(!dummy);
+  };
+
+  const handleDate = (id, e) => {
+    const date = new Date(e.target.value);
+    const updatedDate = data.map((x) => (x.id === id
+      ? {
+        ...x,
+        deadline: intervalToDuration({
+          start: new Date(),
+          end: date,
+        }),
+      }
+      : x));
+
+    localStorage.setItem('todos', JSON.stringify(updatedDate));
+    setDummy(!dummy);
+  };
+
   React.useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(data));
   }, [data]);
@@ -42,6 +65,8 @@ const TodoContainer = () => {
           data,
           handleUpdate,
           setData,
+          handleDelete,
+          handleDate,
         }}
       />
     </div>

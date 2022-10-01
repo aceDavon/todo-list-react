@@ -33,6 +33,9 @@ const Todo = (items) => {
             />
           </label>
           <button type='button' className='p-2 bg-blue-600 text-white rounded-md border border-white mx-2 my-2' onClick={() => handleClick()}>Update</button>
+              onKeyDown={(e) => e.key === 'Enter' && handleClick()}
+            />
+          </label>
         </>
       ) : (
         label

@@ -48,6 +48,7 @@ const Landing = () => {
                   className={
                     deadline
                       ? 'rounded-xl text-sm opacity-100 my-1 w-1/3 text-center'
+                      ? 'border rounded-xl text-sm opacity-100 my-1 bg-white w-1/3 text-center'
                       : 'px-2 py-1 w-1/3 text-center'
                   }
                 >

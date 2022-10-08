@@ -13,8 +13,11 @@
 
 ## Live Demo (if available)
 
-[Vercel](https://todo-list-react-w8sp-acedavon.vercel.app/)
+[Vercel](https://todo-list-react-w8sp-i4a3mzfxv-acedavon.vercel.app/)
 
+## Mockup
+
+> <img src="./src/img/MockUp/3-devices-white.png" />
 
 ## Getting Started
 
